@@ -1,0 +1,22 @@
+import tkinter as tk
+from tkinter import messagebox
+
+# Função que será executada ao clicar no botão
+def mostrar_mensagem():
+    mensagem = "Olá, mundo!"
+    messagebox.showinfo("Mensagem", mensagem)
+
+# Criar a janela principal do aplicativo
+app = tk.Tk()
+app.title("Meu Aplicativo")
+
+# Criar e posicionar um rótulo
+label = tk.Label(app, text="Bem-vindo ao meu aplicativo!", font=("Arial", 16))
+label.pack(pady=20)
+
+# Criar e posicionar um botão
+button = tk.Button(app, text="Clique Aqui", command=mostrar_mensagem)
+button.pack(pady=10)
+
+# Executar o loop principal do aplicativo
+app.mainloop()
